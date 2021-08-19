@@ -16,7 +16,9 @@ function Game() {
                 <br />
                 <ListAttempt></ListAttempt>
                 <OneAttemptLine />
+                <br/>
                 <ColorsChoose></ColorsChoose>
+                <br/>
                 <GuessButton></GuessButton>
                 <ErrorMessage />
                 <ButtonExport />

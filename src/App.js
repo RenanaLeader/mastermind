@@ -13,15 +13,15 @@ import Game from './components/game/game';
 
 function App() {
   //user can choose level and after he moved to the game page
-  const [chooseLevel,setChooseLevel]=useState(false)
+  const [chooseLevel, setChooseLevel] = useState(false)
   return (
     <Box>
       <Container className='container_body'>
-      <h1>mastermind</h1>
-      {chooseLevel?<Game></Game>:<StartGame changeChooseLevelToTrue={()=>setChooseLevel(true)}/>}
-              </Container>
+        <h1>mastermind</h1>
+        {chooseLevel ? <Game></Game> : <StartGame changeChooseLevelToTrue={() => setChooseLevel(true)} />}
+      </Container>
     </Box>
-    
+
   );
 }
 
