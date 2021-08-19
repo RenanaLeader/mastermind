@@ -19,12 +19,15 @@ function Header(props) {
         <>
             
             <div>
-                <ButtonGroup>
+                <ButtonGroup style={{paddingBottom:'17px'}}>
                     <Button onClick={genereteColors}>New Game</Button>
                 </ButtonGroup>
             </div>
             {openColorsComputerChoose ?
-                <ColorsComputerChoose></ColorsComputerChoose>
+            <div>
+                 <ColorsComputerChoose></ColorsComputerChoose>
+            </div>
+               
                 : null}
 
         </>

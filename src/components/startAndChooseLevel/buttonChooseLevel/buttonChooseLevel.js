@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
+import './buttonChooseLevel.css'
 
 export default function ButtonChooseLevel(props){
     //user choose level and save level in redux
@@ -10,8 +11,8 @@ export default function ButtonChooseLevel(props){
    }
     return(
         <>
-       <ButtonGroup>
-       <Button onClick={saveLevel}>{props.level}</Button>
+       <ButtonGroup >
+       <Button style={{marginTop:'10px' ,backgroundColor:'cadetblue',fontSize: 'larger'}} onClick={saveLevel}>{props.level}</Button>
        </ButtonGroup>
         </>
     )

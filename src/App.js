@@ -17,7 +17,7 @@ function App() {
   return (
     <Box>
       <Container className='container_body'>
-        <h1>mastermind</h1>
+        <h1 style={{fontSize:'70px', color:'cadetblue'}}>mastermind</h1>
         {chooseLevel ? <Game></Game> : <StartGame changeChooseLevelToTrue={() => setChooseLevel(true)} />}
       </Container>
     </Box>

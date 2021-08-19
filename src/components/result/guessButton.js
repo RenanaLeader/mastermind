@@ -19,7 +19,7 @@ function GuessButton(props) {
 
     return (
         <>
-            <ButtonGroup > <Button disabled={!ifFillFourCircle} onClick={props.checkedAttempt}>guess</Button></ButtonGroup>
+            <ButtonGroup style={{paddingRight:'17px'}}> <Button disabled={!ifFillFourCircle} onClick={props.checkedAttempt}>guess</Button></ButtonGroup>
             <ButtonGroup > <Button onClick={props.resetCurrentAttemptData}>reset</Button></ButtonGroup>
         </>
     )

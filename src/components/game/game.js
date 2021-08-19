@@ -21,6 +21,7 @@ function Game() {
                 <br/>
                 <GuessButton></GuessButton>
                 <ErrorMessage />
+                <br/>
                 <ButtonExport />
             </Container>
         </Box>
