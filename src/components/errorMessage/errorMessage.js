@@ -20,26 +20,16 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(2, 4, 3),
     },
 }));
-
+//this components for all messages displayed to the user
 function ErrorMessage(props) {
     const classes = useStyles();
-    const [open, setOpen] = React.useState(props.hasError);
-    // useEffect(()=>{
-
-    // },[props.hasError])
-    //   const handleOpen = () => {
-    //     setOpen(true);
-    //   };
-
+   
     const handleClose = () => {
         props.clearError()
     };
 
     return (
         <div>
-            {/* <button type="button" onClick={handleOpen}>
-        react-transition-group
-      </button> */}
             <Modal
                 aria-labelledby="transition-modal-title"
                 aria-describedby="transition-modal-description"
@@ -57,6 +47,7 @@ function ErrorMessage(props) {
                         {props.error.item != 3 ? <h2 id="transition-modal-title">oops</h2> :
                             <EmojiEmotionsIcon style={{ color: 'yellow', width: '50px', height: '50px' }} />}{/*3=win*/}
                         <p id="transition-modal-description">{errors[props.error.item]}</p>
+                        {/* in win */}
                        {props.error.item == 3? <p id="transition-modal-description">after {props.numAttempt} attempts</p>:null}
 
 

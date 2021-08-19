@@ -12,6 +12,7 @@ import { useState } from 'react';
 import Game from './components/game/game';
 
 function App() {
+  //user can choose level and after he moved to the game page
   const [chooseLevel,setChooseLevel]=useState(false)
   return (
     <Box>

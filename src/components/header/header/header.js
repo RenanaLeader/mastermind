@@ -4,9 +4,10 @@ import { actions } from '../../../redux/actions'
 import ColorsComputerChoose from '../colorsComputerChoose/colorsComputerChoose'
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
-import { Box } from '@material-ui/core';
 
+//user start game 
 function Header(props) {
+    //in start user will see 4 black circle to know that the computer generate colors
     const [openColorsComputerChoose, setOpenColorsComputerChoose] = useState(false)
 
     const genereteColors = () => {

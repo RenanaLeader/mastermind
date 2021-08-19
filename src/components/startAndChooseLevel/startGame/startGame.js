@@ -5,11 +5,13 @@ import './startGame.css'
 import { connect } from 'react-redux';
 import { actions } from '../../../redux/actions';
 function StartGame(props) {
+
     const levels = ['Easy', 'Medium', 'Difficult']
+
     const renderLevelsButtons = levels.map((level) => {
-        return <ButtonChooseLevel level={level} 
-        changeChooseLevelToTrue={props.changeChooseLevelToTrue} 
-        saveLevelInRedux={(level)=>{props.saveLevelInRedux(level)}} />
+        return <ButtonChooseLevel level={level}
+            changeChooseLevelToTrue={props.changeChooseLevelToTrue}
+            saveLevelInRedux={(level) => { props.saveLevelInRedux(level) }} />
     })
     return (
         <>
@@ -24,8 +26,6 @@ function StartGame(props) {
 export default connect(
     (state) => {
         return {
-            numLevel:state.game.numLevel
-
         }
     },
     (dispatch) => {

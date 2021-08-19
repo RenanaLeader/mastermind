@@ -4,6 +4,8 @@ import './colorsChoose.css'
 import colors from '../../data/colors'
 import { connect } from 'react-redux';
 import { actions } from '../../redux/actions';
+
+//palette of colors to choose from
 function ColorsChoose(props) {
     
     return (

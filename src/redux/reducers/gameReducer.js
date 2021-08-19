@@ -8,12 +8,13 @@ const initialState = {
         resultAttempt: [],//the player receives a result 
         listAttempts: [],//all attempts
         numAttempt: 1,//num attempt in each play,
-        numWin: 0,
-        numLose: 0,
-        error: { hasError: false },
-        numLevel: 7
+        numWin: 0,//to statistics
+        numLose: 0,//to statistics
+        error: { hasError: false },//for all messages displayed to the user
+        numLevel: 7//level that user choose- low-7,medium-10,high-12
 }
 const game = {
+        //in user choose one from four color
         setSelectedColors(state, action) {
                 if (state.computerColors.length > 0)//the computer yet not generate
                         if (state.selectedColors.length < 4) {//player click more than 4 colors
@@ -33,6 +34,7 @@ const game = {
                         state.error.item = 1//index of message in errors array
                 }
         },
+        //colors that computer generate
         fillComputerColors(state, action) {
                 let i;
                 for (i = 0; i < 4; i++) {
@@ -43,6 +45,7 @@ const game = {
                         state.computerColors[i] = color
                 }
         },
+        //whene user click guess, check his choose
         checkedAttempt(state, action) {
                 state.selectedColors.forEach((color, index) => {
                         if (color == state.computerColors[index])
@@ -64,10 +67,11 @@ const game = {
                 }
                 else
                         state.numAttempt++
+
                 state.listAttempts.push({ "colors": state.selectedColors, 'result': state.resultAttempt })
                 state.selectedColors = []
                 state.resultAttempt = []
-                //user lost
+                //user lost after 10 attempts
                 if (state.numAttempt >= 10) {
                         state.error.hasError = true
                         state.error.item = 4//'You Lost'
@@ -77,10 +81,12 @@ const game = {
                         state.numAttempt = 1
                 }
         },
+        //onclick new game button
         clearData(state, action) {
                 state.listAttempts = []
                 state.selectedColors = []
         },
+        //onclick reset
         resetCurrentAttemptData(state, action) {
                 state.selectedColors = []
         },

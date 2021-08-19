@@ -8,21 +8,21 @@ import { Container, Box } from '@material-ui/core';
 import ErrorMessage from '../errorMessage/errorMessage';
 import ButtonExport from '../buttonExports/buttonExport';
 function Game() {
-  return (
-   
-          <Box minHeight="100vh" display="flex" flexDirection="column" justifyContent="space-between">
-        <Container>
-          <Header></Header>
-          <br/>
-          <ListAttempt></ListAttempt>
-          <OneAttemptLine />
-          <ColorsChoose></ColorsChoose>
-          <GuessButton></GuessButton>
-          <ErrorMessage/>
-          <ButtonExport/>
-        </Container>
-      </Box>
-  );
+    return (
+
+        <Box minHeight="100vh" display="flex" flexDirection="column" justifyContent="space-between">
+            <Container>
+                <Header></Header>
+                <br />
+                <ListAttempt></ListAttempt>
+                <OneAttemptLine />
+                <ColorsChoose></ColorsChoose>
+                <GuessButton></GuessButton>
+                <ErrorMessage />
+                <ButtonExport />
+            </Container>
+        </Box>
+    );
 }
 
 export default Game;

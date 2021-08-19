@@ -4,21 +4,23 @@ import { actions } from '../../redux/actions'
 import Button from '@material-ui/core/Button';
 import ButtonGroup from '@material-ui/core/ButtonGroup';
 
+//button to check current attempt
+//and button to reset current attempt
 function GuessButton(props) {
     const [ifFillFourCircle, setIfFillFourCircle] = useState(false)
+  
+    //after user choose 4 colors
     useEffect(() => {
         if (props.selectedColors.length == 4)
             setIfFillFourCircle(true)
-            else if(props.selectedColors.length==0)
+        else if (props.selectedColors.length == 0)
             setIfFillFourCircle(false)
     }, [props.selectedColors])
 
     return (
         <>
-          <ButtonGroup > <Button disabled={!ifFillFourCircle} onClick={props.checkedAttempt}>guess</Button></ButtonGroup>
-          <ButtonGroup > <Button  onClick={props.resetCurrentAttemptData}>reset</Button></ButtonGroup>
-
-            {/* {ifFillFourCircle ?  <ButtonGroup> <Button onClick={props.checkedAttempt}>guess</Button></ButtonGroup>: null} */}
+            <ButtonGroup > <Button disabled={!ifFillFourCircle} onClick={props.checkedAttempt}>guess</Button></ButtonGroup>
+            <ButtonGroup > <Button onClick={props.resetCurrentAttemptData}>reset</Button></ButtonGroup>
         </>
     )
 }
@@ -31,7 +33,7 @@ export default connect(
     (dispatch) => {
         return {
             checkedAttempt: () => dispatch(actions.checkedAttempt()),
-            resetCurrentAttemptData:() => dispatch(actions.resetCurrentAttemptData())
+            resetCurrentAttemptData: () => dispatch(actions.resetCurrentAttemptData())
         }
     }
 

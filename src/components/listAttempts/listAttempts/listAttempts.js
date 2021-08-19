@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import oneAttemptLine from '../../oneLine/oneAttemptLine/oneAttemptLine'
 import OneAttmptLine from '../../oneLine/oneAttemptLine/oneAttemptLine'
 
+//The user  see all of their previous attempts and results.
+
 function ListAttempt(props)
 {
     const renderListAttempts =  props.listAttempts.map((attempt) => {
