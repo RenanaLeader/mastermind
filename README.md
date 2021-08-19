@@ -8,7 +8,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
-before it do ##npm start 
+before it run npm install 
 
 this project its mastermind game
 
